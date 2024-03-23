@@ -3,7 +3,7 @@ import { expect } from 'chai';
 import Tax from '../src/tax.mjs';
 
 describe('Tax test suite', () => {
-    it.skip('Can calculate price after tax', () => {
+    it('Can calculate price after tax', () => {
         const tax = 24;
         const list_price = 1;
         const expected_price_after_tax = 1.24;
@@ -22,4 +22,3 @@ describe('Tax test suite', () => {
         expect(Tax.figureTaxRate(list_price, total_price)).to.equal(expected_tax_rate);
     });
 });
-
