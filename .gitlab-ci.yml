@@ -32,7 +32,7 @@ pages:      # This job runs in the deploy stage.
   artifacts:
     paths:
       # The folder that contains the files to be exposed at the Page URL
-      - public
+      - dist
   rules:
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
  
