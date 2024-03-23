@@ -1,2 +1,37 @@
-# The Docker image that will be used to build your app
-image: node:latestagain
+default:
+  # The Docker image that will be used to build your app
+  image: node:latest
+  cache: # Cache modules in between jobs
+    key: $CI_COMMIT_REF_SLUG
+    paths:
+      - node_modules/
+
+stages:          # List of stages for jobs, and their order of execution
+  - install
+  - test
+  - deploy
+
+install_dependencies:
+  stage: install
+  script:
+    - npm install
+
+unit-test-job:   # This job runs in the test stage.
+  stage: test    # It only starts when the job in the build stage completes successfully.
+  script:
+    - npm run test
+    - echo "Tests complete."
+
+pages:      # This job runs in the deploy stage.
+  stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
+  before_script:
+    - echo "Deploying pages..."
+    - npm run build
+  script:
+    - echo "Pages successfully deployed at ${CI_PAGES_URL}"
+  artifacts:
+    paths:
+      # The folder that contains the files to be exposed at the Page URL
+      - public
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
