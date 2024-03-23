@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    justify-content: center;
+    background-color: #290019;
+    background-image: url("./tileable-wood-colored.png");
+}
+
+h1 {
+    align-self: center;
+}
+
+#calc-container {
+    display: flex;
+    flex-flow: column;
+    width: 280px;
+    background-color: #ffdebd;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 8px;
+}
+
+#fields {
+    display: flex;
+    flex-flow: column;
+}
+
+#fields > * {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    justify-content: space-between;
+}
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Tax calculator</title>
+        <link rel="stylesheet" href="index.css">
+        <script defer type="module" src="index.mjs"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+    </head>
+    <body>
+        <div id="calc-container">
+            <h1>Tax calculator</h1>
+            <div id="fields">
+                <div>
+                    <span>List price: </span>
+                    <input id="list-price"
+                        aria-label="List price"
+                        type="number"
+                        >
+                    </div>
+                <div>
+                    <span>Tax rate (%): </span>
+                    <input id="tax-rate"
+                        aria-label="Tax rate"
+                        type="number"
+                    >
+                </div>
+                <div>
+                    <span>Total price: </span>
+                    <input id="total-price"
+                        aria-label="Total price"
+                        type="number"
+                    >
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

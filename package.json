@@ -1,0 +1,21 @@
+{
+  "name": "tax-calculator",
+  "version": "1.0.0",
+  "description": "Tax calculator",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "start": "node dev-server.mjs",
+    "build": "mkdir -p dist && rm -f dist/* && cp -r src/* dist",
+    "dev": "node --watch-path=src --watch dev-server.mjs"
+  },
+  "keywords": [],
+  "author": "AUTHOR_NAME_HERE",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^5.1.0",
+    "express": "^4.19.1",
+    "mocha": "^10.3.0"
+  },
+  "type": "module"
+}
