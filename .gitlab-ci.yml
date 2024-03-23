@@ -1,8 +1,6 @@
 default:
   # The Docker image that will be used to build your app
-
-  image: node:latestRev5
-
+  image: node:latest
   cache: # Cache modules in between jobs
     key: $CI_COMMIT_REF_SLUG
     paths:
