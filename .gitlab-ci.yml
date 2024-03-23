@@ -1,6 +1,6 @@
 default:
   # The Docker image that will be used to build your app
-  image: node:latest
+  image: node:latestagain
   cache: # Cache modules in between jobs
     key: $CI_COMMIT_REF_SLUG
     paths:
@@ -35,4 +35,4 @@ pages:      # This job runs in the deploy stage.
       - public
   rules:
     - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
-
+ 
