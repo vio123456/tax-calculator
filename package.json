@@ -6,7 +6,7 @@
   "scripts": {
     "test": "mocha",
     "start": "node dev-server.mjs",
-    "build": "mkdir -p dist && rm -f dist/* && cp -r src/* dist",
+    "build": "mkdir -p public && rm -f public/* && cp -r src/* public",
     "dev": "node --watch-path=src --watch dev-server.mjs"
   },
   "keywords": [],
